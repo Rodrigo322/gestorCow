@@ -1,24 +1,34 @@
 import { Tabs } from "expo-router";
 import { StatusBar } from "expo-status-bar";
-import { CowIcon, GearSixIcon } from "phosphor-react-native";
+import { CactusIcon, CowIcon, GearSixIcon } from "phosphor-react-native";
 
 export default function TabsLayout() {
   return (
     <Tabs
       screenOptions={{
-        headerShown: false,
         tabBarStyle: { backgroundColor: "#019972" },
         tabBarActiveTintColor: "#fff",
         tabBarInactiveTintColor: "#ccc",
         tabBarLabelStyle: { fontSize: 12, fontWeight: "bold" },
+        headerStyle: {
+          backgroundColor: "#019972",
+        },
+        headerTintColor: "#fff",
       }}
     >
       <StatusBar style="dark" backgroundColor="#019972" translucent={false} />
       <Tabs.Screen
         name="home"
         options={{
-          title: "Resumo",
+          title: "Confinamento",
           tabBarIcon: ({ color }) => <CowIcon size={24} color={color} weight="duotone" />,
+        }}
+      />
+      <Tabs.Screen
+        name="pasto"
+        options={{
+          title: "Pasto",
+          tabBarIcon: ({ color }) => <CactusIcon size={24} color={color} weight="duotone" />,
         }}
       />
       <Tabs.Screen

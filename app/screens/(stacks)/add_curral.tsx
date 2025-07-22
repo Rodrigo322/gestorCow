@@ -1,10 +1,9 @@
 import Button from "@/app/components/button";
-import { StyleSheet, Text, TextInput, View } from "react-native";
+import { StyleSheet, TextInput, View } from "react-native";
 
 export default function AddCurral() {
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Adicionar Curral</Text>
       <View style={styles.inputContainer}>
         <TextInput placeholder="Nome do Curral" style={styles.input} />
         <Button title="Salvar Curral" onPress={() => {}} />

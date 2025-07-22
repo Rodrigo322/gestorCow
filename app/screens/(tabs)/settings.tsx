@@ -1,12 +1,26 @@
-import { router } from "expo-router";
-import { Button, StatusBar, StyleSheet, Text, View } from "react-native";
+import { CactusIcon, CowIcon, FadersIcon, ForkKnifeIcon } from "phosphor-react-native";
+import { StyleSheet, Text, View } from "react-native";
 
 export default function Settings() {
   return (
     <View style={styles.container}>
-      <StatusBar barStyle="dark-content" backgroundColor="#fff" />
-      <Text style={styles.text}>Settings Screen</Text>
-      <Button title="Go to Home" onPress={() => router.push("/screens/home")} />
+      <View style={styles.cardConfig}>
+        <CowIcon size={32} weight="duotone" />
+        <Text>Adiconar Bovinos</Text>
+      </View>
+      <View style={styles.cardConfig}>
+        <CactusIcon size={32} weight="duotone" />
+        <Text>Adiconar Pasto</Text>
+      </View>
+      <View style={styles.cardConfig}>
+        <ForkKnifeIcon size={32} weight="duotone" />
+        <Text>Configurar Mistura</Text>
+      </View>
+
+      <View style={styles.cardConfig}>
+        <FadersIcon size={32} weight="duotone" />
+        <Text>Configurar Currais</Text>
+      </View>
     </View>
   );
 }
@@ -14,11 +28,9 @@ export default function Settings() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    paddingVertical: 60,
+    paddingVertical: 10,
     paddingHorizontal: 20,
     backgroundColor: "#019972",
-    justifyContent: "center",
-    alignItems: "center",
   },
   text: {
     fontSize: 48,
@@ -26,5 +38,15 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
     textAlign: "center",
     marginBottom: 20,
+  },
+  cardConfig: {
+    backgroundColor: "#DFEDE9",
+    borderRadius: 8,
+    padding: 15,
+    marginTop: 20,
+    flexDirection: "row",
+    alignItems: "center",
+    gap: 10,
+    elevation: 5,
   },
 });

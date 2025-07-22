@@ -1,7 +1,7 @@
-import Button from "@/app/components/button";
 import CardCurrais from "@/app/components/cardCurral";
 import { router } from "expo-router";
-import { FlatList, StyleSheet, View } from "react-native";
+import { PlusIcon } from "phosphor-react-native";
+import { FlatList, StyleSheet, TextInput, TouchableOpacity, View } from "react-native";
 
 export const INFOCURRAIS = [
   {
@@ -60,6 +60,30 @@ export const INFOCURRAIS = [
     gmd: "0,78KG/Dia",
     consumo: "2,90% PV",
   },
+  {
+    id: "8",
+    title: "Curral 8",
+    category: "Crossbreed (Fêmeas)",
+    animals: 160,
+    gmd: "0,72KG/Dia",
+    consumo: "2,60% PV",
+  },
+  {
+    id: "9",
+    title: "Curral 9",
+    category: "Jersey (Machos)",
+    animals: 140,
+    gmd: "0,65KG/Dia",
+    consumo: "2,40% PV",
+  },
+  {
+    id: "10",
+    title: "Curral 10",
+    category: "Jersey (Fêmeas)",
+    animals: 130,
+    gmd: "0,60KG/Dia",
+    consumo: "2,20% PV",
+  },
 ];
 
 export default function Currais() {
@@ -72,6 +96,7 @@ export default function Currais() {
 
   return (
     <View style={styles.container}>
+      <TextInput style={styles.searchInput} placeholder="Buscar..." />
       <FlatList
         data={INFOCURRAIS}
         keyExtractor={(item) => item.id}
@@ -88,7 +113,9 @@ export default function Currais() {
         showsVerticalScrollIndicator={false}
         contentContainerStyle={{ paddingBottom: 10 }}
       />
-      <Button title="Adicionar Curral" onPress={() => router.push("/screens/add_curral")} />
+      <TouchableOpacity style={styles.addButton} onPress={() => router.push("/screens/add_curral")}>
+        <PlusIcon size={32} weight="bold" color="#019972" />
+      </TouchableOpacity>
     </View>
   );
 }
@@ -99,6 +126,15 @@ export const styles = StyleSheet.create({
     paddingBottom: 20,
     paddingHorizontal: 20,
     backgroundColor: "#019972",
+  },
+  searchInput: {
+    backgroundColor: "#DFEDE9",
+    padding: 12,
+    borderRadius: 8,
+    marginBottom: 20,
+    marginTop: 20,
+    fontSize: 16,
+    color: "#019972",
   },
   text: {
     fontSize: 24,
@@ -117,5 +153,17 @@ export const styles = StyleSheet.create({
     fontSize: 18,
     color: "#019972",
     fontWeight: "bold",
+  },
+  addButton: {
+    position: "absolute",
+    bottom: 80,
+    right: 20,
+    backgroundColor: "#ffff",
+    width: 80,
+    height: 80,
+    borderRadius: 60,
+    justifyContent: "center",
+    alignItems: "center",
+    elevation: 5,
   },
 });

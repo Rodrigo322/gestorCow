@@ -20,7 +20,7 @@ export default function CardCurrais({
 }: CardCurraisProps) {
   return (
     <Pressable style={styles.card} onPress={handlePress}>
-      <CowIcon size={64} weight="duotone" />
+      <CowIcon size={64} weight="duotone" color="#019972" />
       <View style={styles.cardInfo}>
         <Text style={[styles.textCard, { fontWeight: "bold", fontSize: 18 }]}>{title}</Text>
         <Text style={styles.textCard}>Categoria: {category}</Text>
@@ -44,6 +44,7 @@ export const styles = StyleSheet.create({
   textCard: {
     fontSize: 16,
     fontWeight: "semibold",
+    color: "#019972",
   },
   cardInfo: {
     flex: 1,
