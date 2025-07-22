@@ -10,7 +10,7 @@ interface CardCurraisProps {
   handlePress?: () => void;
 }
 
-export function CardCurrais({
+export default function CardCurrais({
   title,
   category,
   animals,
@@ -25,8 +25,6 @@ export function CardCurrais({
         <Text style={[styles.textCard, { fontWeight: "bold", fontSize: 18 }]}>{title}</Text>
         <Text style={styles.textCard}>Categoria: {category}</Text>
         <Text style={styles.textCard}>Animais: {animals}</Text>
-        <Text style={styles.textCard}>GMD: {gmd}</Text>
-        <Text style={styles.textCard}>Consumo MS: {consumo}</Text>
       </View>
     </Pressable>
   );
@@ -35,13 +33,13 @@ export function CardCurrais({
 export const styles = StyleSheet.create({
   card: {
     width: "100%",
-    backgroundColor: "#53bda2",
-    marginTop: 20,
+    backgroundColor: "#DFEDE9",
+    marginTop: 10,
     elevation: 2,
     borderRadius: 8,
     alignItems: "center",
     flexDirection: "row",
-    padding: 10,
+    paddingHorizontal: 10,
   },
   textCard: {
     fontSize: 16,

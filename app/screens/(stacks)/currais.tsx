@@ -1,4 +1,5 @@
-import { CardCurrais } from "@/app/components/cardCurral";
+import Button from "@/app/components/button";
+import CardCurrais from "@/app/components/cardCurral";
 import { router } from "expo-router";
 import { FlatList, StyleSheet, View } from "react-native";
 
@@ -85,8 +86,9 @@ export default function Currais() {
           />
         )}
         showsVerticalScrollIndicator={false}
-        contentContainerStyle={{ paddingBottom: 20 }}
+        contentContainerStyle={{ paddingBottom: 10 }}
       />
+      <Button title="Adicionar Curral" onPress={() => router.push("/screens/add_curral")} />
     </View>
   );
 }
@@ -94,13 +96,26 @@ export default function Currais() {
 export const styles = StyleSheet.create({
   container: {
     flex: 1,
-    paddingVertical: 60,
+    paddingBottom: 20,
     paddingHorizontal: 20,
     backgroundColor: "#019972",
   },
   text: {
     fontSize: 24,
-    color: "#000",
+    color: "#fff",
+    fontWeight: "bold",
+    textTransform: "capitalize",
+    paddingVertical: 20,
+  },
+  button: {
+    backgroundColor: "#DFEDE9",
+    padding: 12,
+    borderRadius: 8,
+    alignItems: "center",
+  },
+  textButton: {
+    fontSize: 18,
+    color: "#019972",
     fontWeight: "bold",
   },
 });

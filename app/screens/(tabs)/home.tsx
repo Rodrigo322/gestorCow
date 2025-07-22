@@ -1,8 +1,8 @@
 import { router } from "expo-router";
 import { ChartBarIcon, CowIcon, GaugeIcon } from "phosphor-react-native";
 import { StatusBar, StyleSheet, Text, View } from "react-native";
-import { Box } from "../../components/box";
-import { Button } from "../../components/button";
+import Box from "../../components/box";
+import Button from "../../components/button";
 
 export default function Home() {
   return (

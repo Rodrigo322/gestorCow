@@ -1,6 +1,6 @@
 import { Link, router } from "expo-router";
-import { StatusBar, StyleSheet, Text, View } from "react-native";
-import { Button } from "./components/button";
+import { StyleSheet, Text, View } from "react-native";
+import Button from "./components/button";
 
 export default function Index() {
   function handleToHome() {
@@ -9,7 +9,6 @@ export default function Index() {
 
   return (
     <View style={styles.container}>
-      <StatusBar barStyle="dark-content" backgroundColor="#fff" />
       <Link href="/screens/home">
         <Text style={styles.text}></Text>
       </Link>

@@ -6,7 +6,7 @@ interface BoxProps {
   value: string | number;
 }
 
-export function Box({ icon, title, value }: BoxProps) {
+export default function Box({ icon, title, value }: BoxProps) {
   return (
     <View style={styles.box}>
       {icon}
