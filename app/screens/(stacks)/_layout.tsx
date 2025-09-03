@@ -14,7 +14,6 @@ export default function StacksLayout() {
       <Stack.Screen name="details/[id]" options={{ title: "Detalhes do Curral" }} />
       <Stack.Screen name="add_curral" options={{ title: "Adicionar Curral" }} />
       <Stack.Screen name="dieta/[id]" options={{ title: "Dieta do Curral" }} />
-      <Stack.Screen name="add_bovino" options={{ title: "Adicionar Bovino" }} />
     </Stack>
   );
 }

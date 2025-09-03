@@ -1,10 +1,11 @@
-import { router } from "expo-router";
+import { useRouter } from "expo-router";
 import { CactusIcon, CowIcon, FadersIcon, ForkKnifeIcon } from "phosphor-react-native";
 import { Pressable, StyleSheet, Text, View } from "react-native";
 
 export default function Settings() {
+  const router = useRouter();
   function handleAddBovino() {
-    router.push("/screens/(stacks)/add_bovino");
+    router.push("/screens/(modals)/add_bovino");
   }
 
   return (
@@ -13,7 +14,7 @@ export default function Settings() {
         <CowIcon size={32} weight="duotone" />
         <Text>Adicionar Bovinos</Text>
       </Pressable>
-      <Pressable style={styles.cardConfig}>
+      <Pressable onPress={() => router.push("/screens/(modals)/modal")} style={styles.cardConfig}>
         <CactusIcon size={32} weight="duotone" />
         <Text>Adicionar Pasto</Text>
       </Pressable>
