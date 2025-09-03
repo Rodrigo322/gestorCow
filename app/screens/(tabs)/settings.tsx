@@ -1,26 +1,31 @@
+import { router } from "expo-router";
 import { CactusIcon, CowIcon, FadersIcon, ForkKnifeIcon } from "phosphor-react-native";
-import { StyleSheet, Text, View } from "react-native";
+import { Pressable, StyleSheet, Text, View } from "react-native";
 
 export default function Settings() {
+  function handleAddBovino() {
+    router.push("/screens/(stacks)/add_bovino");
+  }
+
   return (
     <View style={styles.container}>
-      <View style={styles.cardConfig}>
+      <Pressable style={styles.cardConfig} onPress={handleAddBovino}>
         <CowIcon size={32} weight="duotone" />
-        <Text>Adiconar Bovinos</Text>
-      </View>
-      <View style={styles.cardConfig}>
+        <Text>Adicionar Bovinos</Text>
+      </Pressable>
+      <Pressable style={styles.cardConfig}>
         <CactusIcon size={32} weight="duotone" />
-        <Text>Adiconar Pasto</Text>
-      </View>
-      <View style={styles.cardConfig}>
+        <Text>Adicionar Pasto</Text>
+      </Pressable>
+      <Pressable style={styles.cardConfig}>
         <ForkKnifeIcon size={32} weight="duotone" />
         <Text>Configurar Mistura</Text>
-      </View>
+      </Pressable>
 
-      <View style={styles.cardConfig}>
+      <Pressable style={styles.cardConfig}>
         <FadersIcon size={32} weight="duotone" />
         <Text>Configurar Currais</Text>
-      </View>
+      </Pressable>
     </View>
   );
 }

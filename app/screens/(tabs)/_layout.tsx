@@ -1,5 +1,4 @@
 import { Tabs } from "expo-router";
-import { StatusBar } from "expo-status-bar";
 import { CactusIcon, CowIcon, GearSixIcon } from "phosphor-react-native";
 
 export default function TabsLayout() {
@@ -16,7 +15,6 @@ export default function TabsLayout() {
         headerTintColor: "#fff",
       }}
     >
-      <StatusBar style="dark" backgroundColor="#019972" translucent={false} />
       <Tabs.Screen
         name="home"
         options={{

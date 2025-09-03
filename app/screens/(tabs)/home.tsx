@@ -1,14 +1,12 @@
 import { router } from "expo-router";
 import { ChartBarIcon, CowIcon, GaugeIcon } from "phosphor-react-native";
-import { StatusBar, StyleSheet, View } from "react-native";
+import { StyleSheet, View } from "react-native";
 import Box from "../../components/box";
 import Button from "../../components/button";
 
 export default function Home() {
   return (
     <View style={styles.container}>
-      <StatusBar barStyle="dark-content" backgroundColor="#fff" />
-
       <Box
         icon={<CowIcon size={64} weight="duotone" color="#019972" />}
         title="Total de Animais"
