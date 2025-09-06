@@ -24,7 +24,7 @@ export default function Home() {
       />
 
       <Button
-        title="Acessar currais"
+        title="Acessar Confinamento "
         onPress={() => router.navigate("/screens/(stacks)/currais")}
       />
     </View>

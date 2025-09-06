@@ -1,3 +1,4 @@
+import { ArrowRightIcon } from "phosphor-react-native";
 import { StyleSheet, Text, TouchableOpacity } from "react-native";
 
 interface ButtonProps {
@@ -9,6 +10,7 @@ export default function Button({ title, onPress }: ButtonProps) {
   return (
     <TouchableOpacity style={styles.button} onPress={onPress}>
       <Text style={styles.textButton}>{title}</Text>
+      <ArrowRightIcon size={24} color="#019972" />
     </TouchableOpacity>
   );
 }
@@ -21,6 +23,9 @@ const styles = StyleSheet.create({
     alignItems: "center",
     marginTop: 50,
     paddingVertical: 20,
+    flexDirection: "row",
+    justifyContent: "center",
+    gap: 10,
   },
   textButton: {
     fontSize: 18,

@@ -1,7 +1,7 @@
 import { useRouter } from "expo-router";
 import { useEffect } from "react";
 import { StyleSheet, Text, TextInput, TouchableOpacity, View } from "react-native";
-import Animated, { useAnimatedStyle, useSharedValue, withTiming } from "react-native-reanimated";
+import { useAnimatedStyle, useSharedValue, withTiming } from "react-native-reanimated";
 
 export default function AddBovino() {
   const router = useRouter();
@@ -29,45 +29,43 @@ export default function AddBovino() {
 
   return (
     <View style={styles.overlay}>
-      <Animated.View style={[styles.modal, animatedStyle]}>
-        <View style={styles.containerInput}>
-          <View style={styles.inputGroup}>
-            <Text style={styles.labelInput}>Número</Text>
-            <TextInput style={styles.input} placeholder="Ex: 4-155" />
-          </View>
-
-          <View style={styles.inputsDualGroup}>
-            <View style={[styles.inputGroup, { width: "48%" }]}>
-              <Text style={styles.labelInput}>Sexo</Text>
-              <TextInput style={styles.input} placeholder="Ex: Macho/Fêmea" />
-            </View>
-
-            <View style={[styles.inputGroup, { width: "48%" }]}>
-              <Text style={styles.labelInput}>Raça</Text>
-              <TextInput style={styles.input} placeholder="Ex: Nelore" />
-            </View>
-          </View>
-
-          <View style={styles.inputGroup}>
-            <Text style={styles.labelInput}>Proprietário</Text>
-            <TextInput style={styles.input} placeholder="Ex: Fazenda" />
-          </View>
-
-          <View style={styles.inputGroup}>
-            <Text style={styles.labelInput}>Peso Inicial</Text>
-            <TextInput style={styles.input} placeholder="Ex: 500kg" />
-          </View>
-
-          <View style={styles.inputGroup}>
-            <Text style={styles.labelInput}>Data de Nascimento</Text>
-            <TextInput style={styles.input} placeholder="Ex: 28/02/2025" />
-          </View>
-
-          <TouchableOpacity style={styles.button}>
-            <Text style={styles.labelButton}>Salvar</Text>
-          </TouchableOpacity>
+      <View style={styles.containerInput}>
+        <View style={styles.inputGroup}>
+          <Text style={styles.labelInput}>Número</Text>
+          <TextInput style={styles.input} placeholder="Ex: 4-155" />
         </View>
-      </Animated.View>
+
+        <View style={styles.inputsDualGroup}>
+          <View style={[styles.inputGroup, { width: "48%" }]}>
+            <Text style={styles.labelInput}>Sexo</Text>
+            <TextInput style={styles.input} placeholder="Ex: Macho/Fêmea" />
+          </View>
+
+          <View style={[styles.inputGroup, { width: "48%" }]}>
+            <Text style={styles.labelInput}>Raça</Text>
+            <TextInput style={styles.input} placeholder="Ex: Nelore" />
+          </View>
+        </View>
+
+        <View style={styles.inputGroup}>
+          <Text style={styles.labelInput}>Proprietário</Text>
+          <TextInput style={styles.input} placeholder="Ex: Fazenda" />
+        </View>
+
+        <View style={styles.inputGroup}>
+          <Text style={styles.labelInput}>Peso Inicial</Text>
+          <TextInput style={styles.input} placeholder="Ex: 500kg" />
+        </View>
+
+        <View style={styles.inputGroup}>
+          <Text style={styles.labelInput}>Data de Nascimento</Text>
+          <TextInput style={styles.input} placeholder="Ex: 28/02/2025" />
+        </View>
+
+        <TouchableOpacity style={styles.button}>
+          <Text style={styles.labelButton}>Salvar</Text>
+        </TouchableOpacity>
+      </View>
     </View>
   );
 }

@@ -14,7 +14,7 @@ export default function Settings() {
         <CowIcon size={32} weight="duotone" />
         <Text>Adicionar Bovinos</Text>
       </Pressable>
-      <Pressable onPress={() => router.push("/screens/(modals)/modal")} style={styles.cardConfig}>
+      <Pressable style={styles.cardConfig}>
         <CactusIcon size={32} weight="duotone" />
         <Text>Adicionar Pasto</Text>
       </Pressable>
