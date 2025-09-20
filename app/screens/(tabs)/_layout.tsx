@@ -32,7 +32,7 @@ export default function TabsLayout() {
       <Tabs.Screen
         name="pasto"
         options={{
-          title: "Pasto",
+          title: "Animais",
           tabBarIcon: ({ color }) => <CactusIcon size={24} color={color} weight="duotone" />,
         }}
       />

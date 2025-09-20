@@ -7,6 +7,8 @@ export default function ModalsLayout() {
         headerStyle: { backgroundColor: "#4b7153" },
         headerTintColor: "#fff",
       }}
-    ></Stack>
+    >
+      <Stack.Screen name="add_bovino" options={{ title: "Adicionar Bovino" }} />
+    </Stack>
   );
 }
