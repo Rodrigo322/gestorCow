@@ -1,63 +1,84 @@
-import { router } from "expo-router";
-import { ChartBarIcon, CowIcon, GaugeIcon } from "phosphor-react-native";
-import { StyleSheet, View } from "react-native";
-import Box from "../../components/box";
-import Button from "../../components/button";
+// app/index.tsx
+import { useRouter } from "expo-router";
+import { ChartPieIcon, CowIcon, PlantIcon, TractorIcon } from "phosphor-react-native";
+import React from "react";
+import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
 
-export default function Home() {
+export default function HomeScreen() {
+  const router = useRouter();
+
   return (
     <View style={styles.container}>
-      <Box
-        icon={<CowIcon size={64} weight="duotone" color="#019972" />}
-        title="Total de Animais"
-        value="100"
-      />
-      <Box
-        icon={<GaugeIcon size={64} weight="duotone" color="#019972" />}
-        title="GMD Médio"
-        value="0,75KG/Dia"
-      />
-      <Box
-        icon={<ChartBarIcon size={64} weight="duotone" color="#019972" />}
-        title="Consumo MS Médio"
-        value="2,24% PV"
-      />
+      <Text style={styles.header}>Gestor Cow</Text>
 
-      <Button
-        title="Acessar currais"
-        onPress={() => router.navigate("/screens/(stacks)/currais")}
-      />
+      <View style={styles.grid}>
+        <TouchableOpacity
+          onPress={() => router.push("/screens/(modals)/add_bovino")}
+          style={[styles.card, { backgroundColor: "#4b7153" }]}
+        >
+          <CowIcon size={48} color="#fff" weight="fill" />
+          <Text style={styles.cardTextWhite}>Cadastro de Animais</Text>
+        </TouchableOpacity>
+
+        <TouchableOpacity style={[styles.card, { backgroundColor: "#fff" }]}>
+          <PlantIcon size={48} color="#2e7d32" weight="fill" />
+          <Text style={styles.cardText}>Cadastro de Pastos</Text>
+        </TouchableOpacity>
+
+        <TouchableOpacity style={[styles.card, { backgroundColor: "#fff" }]}>
+          <TractorIcon size={48} color="#5d4037" weight="fill" />
+          <Text style={styles.cardText}>Distribuição de Ração</Text>
+        </TouchableOpacity>
+
+        <TouchableOpacity style={[styles.card, { backgroundColor: "#5d4037" }]}>
+          <ChartPieIcon size={48} color="#fff" weight="fill" />
+          <Text style={styles.cardTextWhite}>Relatórios</Text>
+        </TouchableOpacity>
+      </View>
     </View>
   );
 }
 
-export const styles = StyleSheet.create({
+const styles = StyleSheet.create({
   container: {
     flex: 1,
-    paddingVertical: 30,
+    backgroundColor: "#e8f0e6",
+    paddingTop: 60,
     paddingHorizontal: 20,
-    backgroundColor: "#019972",
+  },
+  header: {
+    fontSize: 24,
+    fontWeight: "bold",
+    color: "#000",
+    marginBottom: 40,
+    textAlign: "center",
+  },
+  grid: {
+    flexDirection: "row",
+    flexWrap: "wrap",
     justifyContent: "space-between",
   },
-  text: {
-    fontSize: 48,
-    color: "#019972",
-    fontWeight: "bold",
-    textAlign: "center",
+  card: {
+    width: "47%",
+    height: 180,
+    borderRadius: 16,
     marginBottom: 20,
-  },
-
-  button: {
-    backgroundColor: "#DFEDE9",
-    padding: 12,
-    borderRadius: 8,
     alignItems: "center",
-    marginTop: 50,
-    paddingVertical: 20,
+    justifyContent: "center",
+    elevation: 3,
   },
-  textButton: {
-    fontSize: 18,
-    color: "#019972",
-    fontWeight: "bold",
+  cardText: {
+    marginTop: 12,
+    fontSize: 15,
+    fontWeight: "600",
+    color: "#000",
+    textAlign: "center",
+  },
+  cardTextWhite: {
+    marginTop: 12,
+    fontSize: 15,
+    fontWeight: "600",
+    color: "#fff",
+    textAlign: "center",
   },
 });

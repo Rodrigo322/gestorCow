@@ -4,7 +4,7 @@ export default function ModalsLayout() {
   return (
     <Stack
       screenOptions={{
-        headerStyle: { backgroundColor: "#019972" },
+        headerStyle: { backgroundColor: "#4b7153" },
         headerTintColor: "#fff",
       }}
     ></Stack>

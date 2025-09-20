@@ -114,7 +114,7 @@ export default function Currais() {
         contentContainerStyle={{ paddingBottom: 10 }}
       />
       <TouchableOpacity style={styles.addButton} onPress={() => router.push("/screens/add_curral")}>
-        <PlusIcon size={32} weight="bold" color="#019972" />
+        <PlusIcon size={32} weight="bold" color="#4b7153" />
       </TouchableOpacity>
     </View>
   );
@@ -125,7 +125,7 @@ export const styles = StyleSheet.create({
     flex: 1,
     paddingBottom: 20,
     paddingHorizontal: 20,
-    backgroundColor: "#019972",
+    backgroundColor: "#e8f0e6",
   },
   searchInput: {
     backgroundColor: "#DFEDE9",
@@ -134,7 +134,7 @@ export const styles = StyleSheet.create({
     marginBottom: 20,
     marginTop: 20,
     fontSize: 16,
-    color: "#019972",
+    color: "#4b7153",
   },
   text: {
     fontSize: 24,

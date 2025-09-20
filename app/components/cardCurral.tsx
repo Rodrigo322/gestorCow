@@ -10,17 +10,10 @@ interface CardCurraisProps {
   handlePress?: () => void;
 }
 
-export default function CardCurrais({
-  title,
-  category,
-  animals,
-  gmd,
-  consumo,
-  handlePress,
-}: CardCurraisProps) {
+export default function CardCurrais({ title, category, animals, handlePress }: CardCurraisProps) {
   return (
     <Pressable style={styles.card} onPress={handlePress}>
-      <CowIcon size={64} weight="duotone" color="#019972" />
+      <CowIcon size={64} weight="duotone" color="#4b7153" />
       <View style={styles.cardInfo}>
         <Text style={[styles.textCard, { fontWeight: "bold", fontSize: 18 }]}>{title}</Text>
         <Text style={styles.textCard}>Categoria: {category}</Text>
@@ -33,7 +26,7 @@ export default function CardCurrais({
 export const styles = StyleSheet.create({
   card: {
     width: "100%",
-    backgroundColor: "#DFEDE9",
+    backgroundColor: "#fff",
     marginTop: 10,
     elevation: 2,
     borderRadius: 8,
@@ -44,7 +37,7 @@ export const styles = StyleSheet.create({
   textCard: {
     fontSize: 16,
     fontWeight: "semibold",
-    color: "#019972",
+    color: "#000",
   },
   cardInfo: {
     flex: 1,

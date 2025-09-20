@@ -17,7 +17,7 @@ const styles = StyleSheet.create({
     flex: 1,
     paddingVertical: 20,
     paddingHorizontal: 20,
-    backgroundColor: "#019972",
+    backgroundColor: "#e8f0e6",
   },
   title: {
     fontSize: 24,
@@ -32,7 +32,7 @@ const styles = StyleSheet.create({
     paddingBottom: 42,
   },
   input: {
-    backgroundColor: "#DFEDE9",
+    backgroundColor: "#fff",
     padding: 12,
     borderRadius: 8,
     alignItems: "center",

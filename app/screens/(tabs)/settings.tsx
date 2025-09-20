@@ -1,32 +1,59 @@
-import { useRouter } from "expo-router";
-import { CactusIcon, CowIcon, FadersIcon, ForkKnifeIcon } from "phosphor-react-native";
-import { Pressable, StyleSheet, Text, View } from "react-native";
+// app/settings.tsx
+import {
+  BellIcon,
+  CaretRightIcon,
+  GlobeIcon,
+  InfoIcon,
+  LockIcon,
+  UserIcon,
+} from "phosphor-react-native";
+import React from "react";
+import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
 
-export default function Settings() {
-  const router = useRouter();
-  function handleAddBovino() {
-    router.push("/screens/(modals)/add_bovino");
-  }
-
+export default function SettingsScreen() {
   return (
     <View style={styles.container}>
-      <Pressable style={styles.cardConfig} onPress={handleAddBovino}>
-        <CowIcon size={32} weight="duotone" />
-        <Text>Adicionar Bovinos</Text>
-      </Pressable>
-      <Pressable onPress={() => router.push("/screens/(modals)/modal")} style={styles.cardConfig}>
-        <CactusIcon size={32} weight="duotone" />
-        <Text>Adicionar Pasto</Text>
-      </Pressable>
-      <Pressable style={styles.cardConfig}>
-        <ForkKnifeIcon size={32} weight="duotone" />
-        <Text>Configurar Mistura</Text>
-      </Pressable>
+      <View style={styles.list}>
+        <TouchableOpacity style={styles.item}>
+          <View style={styles.itemContent}>
+            <UserIcon size={28} color="#2e7d32" weight="regular" />
+            <Text style={styles.itemText}>Perfil do Usuário</Text>
+          </View>
+          <CaretRightIcon size={22} color="#888" />
+        </TouchableOpacity>
 
-      <Pressable style={styles.cardConfig}>
-        <FadersIcon size={32} weight="duotone" />
-        <Text>Configurar Currais</Text>
-      </Pressable>
+        <TouchableOpacity style={styles.item}>
+          <View style={styles.itemContent}>
+            <BellIcon size={28} color="#2e7d32" weight="regular" />
+            <Text style={styles.itemText}>Notificações</Text>
+          </View>
+          <CaretRightIcon size={22} color="#888" />
+        </TouchableOpacity>
+
+        <TouchableOpacity style={styles.item}>
+          <View style={styles.itemContent}>
+            <GlobeIcon size={28} color="#2e7d32" weight="regular" />
+            <Text style={styles.itemText}>Idioma</Text>
+          </View>
+          <CaretRightIcon size={22} color="#888" />
+        </TouchableOpacity>
+
+        <TouchableOpacity style={styles.item}>
+          <View style={styles.itemContent}>
+            <LockIcon size={28} color="#8d6e63" weight="regular" />
+            <Text style={styles.itemText}>Segurança</Text>
+          </View>
+          <CaretRightIcon size={22} color="#888" />
+        </TouchableOpacity>
+
+        <TouchableOpacity style={styles.item}>
+          <View style={styles.itemContent}>
+            <InfoIcon size={28} color="#8d6e63" weight="regular" />
+            <Text style={styles.itemText}>Sobre o App</Text>
+          </View>
+          <CaretRightIcon size={22} color="#888" />
+        </TouchableOpacity>
+      </View>
     </View>
   );
 }
@@ -34,25 +61,38 @@ export default function Settings() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    paddingVertical: 10,
-    paddingHorizontal: 20,
-    backgroundColor: "#019972",
+    backgroundColor: "#E9F0E7",
+    paddingTop: 60,
+    paddingHorizontal: 16,
   },
-  text: {
-    fontSize: 48,
-    color: "#ffff",
+  header: {
+    fontSize: 22,
     fontWeight: "bold",
+    color: "#000",
+    marginBottom: 30,
     textAlign: "center",
-    marginBottom: 20,
   },
-  cardConfig: {
-    backgroundColor: "#DFEDE9",
-    borderRadius: 8,
-    padding: 15,
-    marginTop: 20,
+  list: {
+    gap: 16,
+  },
+  item: {
+    backgroundColor: "#fff",
+    borderRadius: 12,
+    paddingVertical: 16,
+    paddingHorizontal: 20,
     flexDirection: "row",
     alignItems: "center",
-    gap: 10,
-    elevation: 5,
+    justifyContent: "space-between",
+    elevation: 2,
+  },
+  itemContent: {
+    flexDirection: "row",
+    alignItems: "center",
+    gap: 12,
+  },
+  itemText: {
+    fontSize: 16,
+    fontWeight: "500",
+    color: "#000",
   },
 });

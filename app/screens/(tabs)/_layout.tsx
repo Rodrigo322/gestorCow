@@ -1,22 +1,29 @@
 import { Tabs } from "expo-router";
-import { CactusIcon, CowIcon, GearSixIcon } from "phosphor-react-native";
+import { CactusIcon, CowIcon, GearSixIcon, HouseLineIcon } from "phosphor-react-native";
 
 export default function TabsLayout() {
   return (
     <Tabs
       screenOptions={{
-        tabBarStyle: { backgroundColor: "#019972" },
+        tabBarStyle: { backgroundColor: "#4b7153" },
         tabBarActiveTintColor: "#fff",
         tabBarInactiveTintColor: "#ccc",
         tabBarLabelStyle: { fontSize: 12, fontWeight: "bold" },
         headerStyle: {
-          backgroundColor: "#019972",
+          backgroundColor: "#4b7153",
         },
         headerTintColor: "#fff",
       }}
     >
       <Tabs.Screen
         name="home"
+        options={{
+          title: "Início",
+          tabBarIcon: ({ color }) => <HouseLineIcon size={24} color={color} weight="duotone" />,
+        }}
+      />
+      <Tabs.Screen
+        name="confinamento"
         options={{
           title: "Confinamento",
           tabBarIcon: ({ color }) => <CowIcon size={24} color={color} weight="duotone" />,
