@@ -40,13 +40,13 @@ const styles = StyleSheet.create({
     flex: 1,
     paddingVertical: 40,
     paddingHorizontal: 20,
-    backgroundColor: "#019972",
+    backgroundColor: "#e8f0e6",
     justifyContent: "space-between",
   },
   title: {
     fontSize: 24,
     fontWeight: "bold",
-    color: "#fff",
+    color: "#000",
   },
   text: {
     fontSize: 18,
@@ -68,7 +68,7 @@ const styles = StyleSheet.create({
     fontSize: 34,
   },
   card: {
-    backgroundColor: "#DFEDE9",
+    backgroundColor: "#ffff",
     borderRadius: 8,
     padding: 12,
     margin: 16,

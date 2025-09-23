@@ -89,7 +89,7 @@ export const INFOCURRAIS = [
 export default function Currais() {
   function handlePressDetails(id: string) {
     router.push({
-      pathname: "/screens/details/[id]",
+      pathname: "/details/[id]",
       params: { id },
     });
   }
@@ -113,7 +113,7 @@ export default function Currais() {
         showsVerticalScrollIndicator={false}
         contentContainerStyle={{ paddingBottom: 10 }}
       />
-      <TouchableOpacity style={styles.addButton} onPress={() => router.push("/screens/add_curral")}>
+      <TouchableOpacity style={styles.addButton} onPress={() => router.push("/add_curral")}>
         <PlusIcon size={32} weight="bold" color="#4b7153" />
       </TouchableOpacity>
     </View>

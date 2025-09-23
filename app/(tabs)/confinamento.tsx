@@ -1,8 +1,8 @@
 import { router } from "expo-router";
 import { ChartBarIcon, CowIcon, GaugeIcon } from "phosphor-react-native";
 import { StyleSheet, View } from "react-native";
-import Box from "../../components/box";
-import Button from "../../components/button";
+import Box from "../components/box";
+import Button from "../components/button";
 
 export default function Confinamento() {
   return (
@@ -23,10 +23,7 @@ export default function Confinamento() {
         value="2,24% PV"
       />
 
-      <Button
-        title="Acessar currais"
-        onPress={() => router.navigate("/screens/(stacks)/currais")}
-      />
+      <Button title="Acessar currais" onPress={() => router.navigate("/(stacks)/currais")} />
     </View>
   );
 }

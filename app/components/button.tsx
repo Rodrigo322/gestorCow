@@ -10,7 +10,7 @@ export default function Button({ title, onPress }: ButtonProps) {
   return (
     <TouchableOpacity style={styles.button} onPress={onPress}>
       <Text style={styles.textButton}>{title}</Text>
-      <ArrowRightIcon size={24} color="#019972" />
+      <ArrowRightIcon size={24} color="#4b7153" />
     </TouchableOpacity>
   );
 }

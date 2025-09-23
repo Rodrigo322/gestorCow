@@ -13,7 +13,7 @@ export default function HomeScreen() {
 
       <View style={styles.grid}>
         <TouchableOpacity
-          onPress={() => router.push("/screens/(modals)/add_bovino")}
+          onPress={() => router.push("/(modals)/add_bovino")}
           style={[styles.card, { backgroundColor: "#4b7153" }]}
         >
           <CowIcon size={48} color="#fff" weight="fill" />

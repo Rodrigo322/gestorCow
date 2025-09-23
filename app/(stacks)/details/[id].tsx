@@ -31,7 +31,7 @@ export default function Details() {
   function handleInsertDieta() {
     let parsedId: string | number = Array.isArray(id) ? id[0] : id;
     router.push({
-      pathname: "/screens/dieta/[id]",
+      pathname: "/dieta/[id]",
       params: { id: parsedId },
     });
   }
@@ -62,7 +62,7 @@ export default function Details() {
           height={220}
           yAxisSuffix=" kg"
           chartConfig={{
-            backgroundColor: "#53bda2",
+            backgroundColor: "#4b7153",
             backgroundGradientFrom: "#f3f4f6",
             backgroundGradientTo: "#e5e7eb",
             decimalPlaces: 2,
@@ -102,7 +102,7 @@ const styles = StyleSheet.create({
     paddingTop: 20,
     paddingBottom: 60,
     paddingHorizontal: 20,
-    backgroundColor: "#019972",
+    backgroundColor: "#e8f0e6",
     gap: 10,
     justifyContent: "space-between",
   },
@@ -111,11 +111,11 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
     textAlign: "center",
     marginBottom: 10,
-    color: "#DFEDE9",
+    color: "#000",
   },
   infoCard: {
     width: "100%",
-    backgroundColor: "#DFEDE9",
+    backgroundColor: "#4b7153",
     marginTop: 20,
     elevation: 2,
     borderRadius: 8,
@@ -126,17 +126,18 @@ const styles = StyleSheet.create({
   text: {
     fontSize: 16,
     fontWeight: "semibold",
+    color: "#FFF",
   },
   infoDieta: {
     fontSize: 20,
     fontWeight: "bold",
     marginTop: 20,
     textAlign: "center",
-    color: "#DFEDE9",
+    color: "#000",
   },
   dietaContainer: {
     width: "100%",
-    backgroundColor: "#DFEDE9",
+    backgroundColor: "#4b7153",
     elevation: 2,
     borderRadius: 8,
     padding: 10,

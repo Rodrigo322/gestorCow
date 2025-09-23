@@ -1,11 +1,7 @@
 import { Slot } from "expo-router";
-import { StatusBar } from "expo-status-bar";
 
 export default function RootLayout() {
-  return (
-    <>
-      <StatusBar translucent />
-      <Slot />
-    </>
-  );
+  const isLoggedIn = false;
+
+  return <Slot />;
 }

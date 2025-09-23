@@ -10,6 +10,7 @@ export default function StacksLayout() {
         headerTintColor: "#fff",
       }}
     >
+      <Stack.Screen name="login" options={{ title: "Login" }} />
       <Stack.Screen name="currais" options={{ title: "Currais" }} />
       <Stack.Screen name="details/[id]" options={{ title: "Detalhes do Curral" }} />
       <Stack.Screen name="add_curral" options={{ title: "Adicionar Curral" }} />
